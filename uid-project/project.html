@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal website</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=acme' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+    </head>
+    <style>
+        body
+        {
+            background-image:url('https://i.ytimg.com/vi/BBXKBB67FcY/maxresdefault.jpg');
+        }
+        .header
+        {
+            text-align: center;
+            background-color: skyblue;
+            padding: 12px;
+        }
+        .header h1{
+            font-size: 50px;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            }
+
+/* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+/* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+            img {
+                border-radius: 50%;
+                float:left;
+            }
+            .d2 {
+                margin-top:2%;
+                margin-bottom:3%;
+                font-size:60px;
+                font-family: 'Comic Sans MS';
+                }
+            .d1 {
+                font-size:35px;
+                font-family: 'Niconne',sans-serif;
+                }
+                @media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  @media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: chartreuse;
+  }
+}
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.topnav a.active {
+  background-color:rgb(31, 143, 133);
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+    </style>
+    <body>
+        <div class="header">
+            <h1 style="color:lightgreen" id="changecolor">Personal website</h1>
+          </div>
+          <div class="topnav" id="myTopnav">
+            <a href="project.html" class="active">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Aboutme.html">About me</a>
+            <a href="Contact.html">contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+      </div>
+        <div>
+            <img  class="img" src=" https://chethan9604.github.io/personal-website/IMG_20191021_180237.jpg" width="400" height="400">
+            <h1 class="container d2" style="color: salmon;">Chethan sai kumar reddy</h1>
+            <h1 class="container d2" style="color: salmon;">Computer Science Student</h1>
+            <h1 class="container d1" style="color: plum;">"You have to be at your strongest when you are feeling at tour weakest"</h1>
+        </div>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            body=document.body;
+            body.addEventListener('mousemove',runit);
+            function runit(e)
+            {
+              change=document.getElementById('changecolor');
+              change.style.color="rgb("+e.offsetX+","+e.offsetY+","+"108"+")";
+            }
+            </script>
+    </body>
+</html>
