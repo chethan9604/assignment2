@@ -49,9 +49,15 @@
             submit.addEventListener('click',validate)
     
             function check1(e){
-                var letters =/[a-zA-Z ]*/;
-                var name1 = e.target.value;
-                if(name1.length!=0 && name1.match(letters)){
+                var fl=true;
+                var nbool = true;
+                var n = iname.value;
+                for(var i=0;i<n.length;i++){
+                    if(!((n[i]>='a' && n[i]<='z') || (n[i]>='A' && n[i]<='Z') || n[i]==' ')){
+                        nbool = false;
+                    } 
+                }
+                if(iname.length!=0 && nbool){
                     e.target.className="form-control is-valid";
                 }
                 else{
@@ -70,13 +76,19 @@
     
             function validate(e){
                 var fl=true;
-                var pattern = /[a-zA-Z ]*/;
+                var nbool = true;
+                var n = iname.value;
+                for(var i=0;i<n.length;i++){
+                    if(!((n[i]>='a' && n[i]<='z') || (n[i]>='A' && n[i]<='Z') || n[i]==' ')){
+                        nbool = false;
+                    } 
+                }
                 if(iname.value.length == 0){
                     alert('Name should not be empty');
                     iname.className="form-control is-invalid"
                     fl=false;
                 }
-                else if(!(iname.value.match(pattern))){
+                else if(!(nbool)){
                     alert('Name Should only contain alphabets');
                     iname.className="form-control is-invalid"
                     fl=false;
