@@ -49,7 +49,7 @@
             submit.addEventListener('click',validate)
     
             function check1(e){
-                var letters =/^[a-z][a-z\s]*$/;
+                var letters =/[a-zA-Z ]*/;
                 var name1 = e.target.value;
                 if(name1.length!=0 && name1.match(letters)){
                     e.target.className="form-control is-valid";
@@ -70,7 +70,7 @@
     
             function validate(e){
                 var fl=true;
-                var pattern = /^[A-Za-z]+$/;
+                var pattern = /[a-zA-Z ]*/;
                 if(iname.value.length == 0){
                     alert('Name should not be empty');
                     iname.className="form-control is-invalid"
